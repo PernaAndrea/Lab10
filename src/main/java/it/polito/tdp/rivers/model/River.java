@@ -7,7 +7,7 @@ public class River {
 	private int id;
 	private String name;
 	private double flowAvg;
-	private List<Flow> flows;
+	public List<Flow> flows;
 	
 	public River(int id) {
 		this.id = id;
