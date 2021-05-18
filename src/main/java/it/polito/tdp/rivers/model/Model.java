@@ -10,11 +10,13 @@ public class Model {
 
 	private RiversDAO dao ;
 	private ArrayList<River> fiumi;
+	private Simulator s ;
 	
 	public Model() {
 		
 		dao = new RiversDAO();
 		fiumi = new ArrayList<>(dao.getAllRivers());
+		
 	}
 	
 	public List<River> getAllRivers() {
@@ -50,5 +52,16 @@ public class Model {
 	public double getFmedia(River value) {
 		// TODO Auto-generated method stub
 		return value.getFlowAvg();
+	}
+	public void simulo(River r, double k) {
+		s = new Simulator();
+		s.init(r, k);
+		s.run();
+	}
+	public double getCmed() {
+		return s.getCmed();
+	}
+	public int getGiorni() {
+		return s.getGiorniSbagliati();
 	}
 }

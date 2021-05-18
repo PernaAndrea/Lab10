@@ -57,7 +57,7 @@
 					<children>
 						<Label text="Fattore di scala (k)" />
 						<TextField fx:id="txtK" />
-						<Button fx:id="btnSimula" mnemonicParsing="false" text="Simula" />
+						<Button fx:id="btnSimula" mnemonicParsing="false" onAction="#doSimula" text="Simula" />
 					</children>
 				</HBox>
 				<TextArea fx:id="txtResult" editable="false" prefHeight="200.0" prefWidth="200.0" />

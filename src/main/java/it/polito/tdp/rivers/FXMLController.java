@@ -58,6 +58,14 @@ public class FXMLController {
     	txtNumMeasurements.setText(""+model.getNMeasurements(boxRiver.getValue()));
     	txtFMed.setText(""+model.getFmedia(boxRiver.getValue()));
     }
+    
+    @FXML
+    void doSimula(ActionEvent event) {
+
+    	model.simulo(boxRiver.getValue(), Double.parseDouble(txtK.getText()));
+    	txtResult.setText("Capacità media : "+model.getCmed());
+    	txtResult.appendText("Giorni Sbagliati : "+model.getGiorni());
+    }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
